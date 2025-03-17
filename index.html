@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="welcome-section">
+            <h1>Welcome to Green Cloud</h1>
+            <p>Your sustainable cloud monitoring solution. Access your dashboard to manage resources efficiently and eco-consciously.</p>
+        </div>
+        <div class="login-box">
+            <div class="cloud-logo">
+                <svg width="100" height="60" viewBox="0 0 100 60">
+                    <path d="M25,45 Q40,35 50,45 Q60,55 75,45 Q85,40 90,50 Q80,60 50,60 Q20,60 10,50 Q15,40 25,45" fill="#4CAF50"/>
+                </svg>
+            </div>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+            <div id="error-message" class="error-message"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

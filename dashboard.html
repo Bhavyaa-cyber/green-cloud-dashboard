@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWS Cloud Monitoring Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Include Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Include Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="green clouf logo.png" alt="Cloud Logo">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">EC2</a></li>
+          <li><a href="#">S3</a></li>
+          <li><a href="#">RDS</a></li>
+          <li><a href="#">Lambda</a></li>
+          <li><a href="#">Kubernetes</a></li>
+          <li><a href="#">CloudWatch</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <h2>AWS Cloud Monitoring Dashboard</h2>
+        <p>Monitor your AWS and Kubernetes resources in real-time.</p>
+      </header>
+
+      <!-- Resource Cards -->
+      <div class="resource-cards">
+        <!-- EC2 Instances Card -->
+        <div class="card">
+          <h2>EC2 Instances</h2>
+          <div class="progress-bar">
+            <div class="progress" id="ec2-progress" style="width: 0%;"></div>
+          </div>
+          <p id="ec2-text">0% utilized</p>
+        </div>
+
+        <!-- S3 Buckets Card -->
+        <div class="card">
+          <h2>S3 Buckets</h2>
+          <div class="progress-bar">
+            <div class="progress" id="s3-progress" style="width: 0%;"></div>
+          </div>
+          <p id="s3-text">0% utilized</p>
+        </div>
+
+        <!-- RDS Databases Card -->
+        <div class="card">
+          <h2>RDS Databases</h2>
+          <div class="progress-bar">
+            <div class="progress" id="rds-progress" style="width: 0%;"></div>
+          </div>
+          <p id="rds-text">0% utilized</p>
+        </div>
+
+        <!-- Kubernetes Pods Card -->
+        <div class="card">
+          <h2>Kubernetes Pods</h2>
+          <div class="progress-bar">
+            <div class="progress" id="k8s-pods-progress" style="width: 0%;"></div>
+          </div>
+          <p id="k8s-pods-text">0% utilized</p>
+        </div>
+      </div>
+
+      <!-- Charts Section -->
+      <div class="charts">
+        <!-- EC2 Instances Chart -->
+        <div class="chart-container">
+          <h3>EC2 Instances</h3>
+          <canvas id="ec2Chart"></canvas>
+        </div>
+        
+
+        <!-- S3 Buckets Chart -->
+        <div class="chart-container">
+          <h3>S3 Buckets</h3>
+          <canvas id="s3Chart"></canvas>
+        </div>   
+        <!-- RDS Databases Chart -->
+        <div class="chart-container">
+          <h3>RDS Databases</h3>
+          <canvas id="rdsChart"></canvas>
+        </div>
+
+        <!-- Kubernetes Pods Chart -->
+        <div class="chart-container">
+          <h3>Kubernetes Pods</h3>
+          <canvas id="k8sPodsChart"></canvas>
+        </div>
+      </div>
+
+      <!-- AI Recommendations Section -->
+      <div class="ai-recommendations">
+        <h2>AI Recommendations</h2>
+        <div class="recommendation">
+          <p>Optimize EC2 instances by resizing underutilized instances.</p>
+        </div>
+        <div class="recommendation">
+          <p>Enable S3 lifecycle policies to reduce storage costs.</p>
+        </div>
+        <div class="recommendation">
+          <p>Upgrade RDS instances to improve database performance.</p>
+        </div>
+        <div class="recommendation">
+          <p>Scale Kubernetes Pods to handle increased traffic.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Include your JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
